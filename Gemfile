@@ -4,7 +4,9 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 ruby '2.5.3'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
+
 gem 'rails', '~> 5.2.2'
+
 # Use sqlite3 as the database for Active Record
 group :production do
   #Use pg as the production database for Active Record
@@ -49,6 +51,12 @@ group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
 end
+
+group :development, :test do
+  gem 'rspec-rails', '~> 3.0'
+  gem 'rails-controller-testing'
+end
+
 
 group :development do
   # Access an interactive console on exception pages or by calling 'console' anywhere in the code.
