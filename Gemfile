@@ -7,6 +7,10 @@ ruby '2.5.3'
 
 gem 'rails', '~> 5.2.2'
 
+group :development do
+  gem 'pry-rails'
+end
+
 # Use sqlite3 as the database for Active Record
 group :production do
   #Use pg as the production database for Active Record
