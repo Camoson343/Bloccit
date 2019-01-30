@@ -14,6 +14,8 @@ group :production do
   gem 'rails_12factor'
 end
 
+gem 'bootstrap-sass'
+
 group :development, :test do
   # Use sqlite3 as the development database for Active Record
 gem 'sqlite3'
