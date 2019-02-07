@@ -21,13 +21,9 @@ require 'random_data'
    )
  end
 
- test_post do
-   Post.find_or_create_by(
-
-     title: "test title"
-     body: "test body"
-   )
- end
+ puts "#{Post.count}"
+ posts.find_or_create_by(title: "A unique title", body: "A unique body")
+ puts "#{Post.count}"
 
  puts "Seed finished"
  puts "#{Post.count} posts created"
