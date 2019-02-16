@@ -1,6 +1,10 @@
 <h1>Posts#index</h1>
 <h1>All Posts</h1>
  # #12
+
+ if post % 5 == 0
+ post.title = "Spam"
+ else
  <% @posts.each do |post| %>
  <div class="media">
     <div class="media-body">
@@ -10,3 +14,4 @@
     </div>
   </div>
  <% end %>
+ end
