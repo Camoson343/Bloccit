@@ -8,6 +8,8 @@ class PostsController < ApplicationController
   end
 
   def new
+    #7
+    @post = Post.new
   end
 
   def edit
