@@ -22,11 +22,11 @@ require 'random_data'
  end
 
  puts "#{Post.count}"
- posts.find_or_create_by(title: "A unique title", body: "A unique body")
+ p = posts.find_or_create_by(title: "A unique title", body: "A unique body")
  puts "#{Post.count}"
 
  puts "#{Comment.create}"
- comments.find_or_create_by(body: "A unique body")
+ comments.find_or_create_by(title: p body: "A unique body")
  puts "#{Comment.count}"
 
  puts "Seed finished"
