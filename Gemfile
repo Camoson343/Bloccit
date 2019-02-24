@@ -14,7 +14,7 @@ group :production do
   gem 'rails_12factor'
 end
 
-gem 'bootstrap-sass'
+gem 'bootstrap-sass', ">= 3.4.1"
 
 gem "aws-sdk-s3", require: false
 
