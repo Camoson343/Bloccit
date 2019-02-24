@@ -4,12 +4,16 @@ class AdvertisementsController < ApplicationController
   end
 
   def show
-    @advertisement = advertisement.find(params[:id])
+    @advertisement = Advertisement.find(params[:id])
   end
 
   def new
+    @advertisemnt = Advertisment.new
   end
 
   def create
+    @Advertisement = Advertisment.new
+    @Advetisement.title = params[:title]
+    @Advertisment.copy = params[:copy]
   end
 end

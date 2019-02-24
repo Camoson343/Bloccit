@@ -21,6 +21,17 @@ require 'random_data'
    )
  end
 
+ 5.times do
+   Advertisment.create!(
+     title: advertisments.sample,
+     copy: RandomData.random_paragraph
+   )
+ end
+
+ puts "#{Advertisment.count}"
+ advertisments.find_or_create_by(title: "A unique title", body: "A unique body")
+ puts "#{Advertisement.count}"
+
  puts "#{Post.count}"
  posts.find_or_create_by(title: "A unique title", body: "A unique body")
  puts "#{Post.count}"
