@@ -1,5 +1,14 @@
 require 'random_data'
 
+ # Create Advertisements
+  15.times do
+    Advertisement.create!(
+      title: Randomdata.random_sentence,
+      copy: Randomdata.random_paragraph,
+      price: 99
+    )
+  end
+
  # Create Posts
  50.times do
  # #1
@@ -28,3 +37,4 @@ require 'random_data'
  puts "Seed finished"
  puts "#{Post.count} posts created"
  puts "#{Comment.count} comments created"
+ puts "#{Advertisement.count} ads created"
