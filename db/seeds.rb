@@ -3,8 +3,8 @@ require 'random_data'
  # Create Advertisements
   15.times do
     Advertisement.create!(
-      title: Randomdata.random_sentence,
-      copy: Randomdata.random_paragraph,
+      title: RandomData.random_sentence,
+      copy: RandomData.random_paragraph,
       price: 99
     )
   end
@@ -31,7 +31,7 @@ require 'random_data'
  end
 
  puts "#{Post.count}"
- posts.find_or_create_by(title: "A unique title", body: "A unique body")
+ Post.find_or_create_by(title: "A unique title", body: "A unique body")
  puts "#{Post.count}"
 
  puts "Seed finished"
