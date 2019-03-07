@@ -4,7 +4,8 @@ require 'random_data'
   15.times do
     SponsoredPost.create!(
       title: RandomData.random_sentence,
-      body: RandomData.random_sentence
+      body: RandomData.random_sentence,
+      price: 99
     )
   end
 
@@ -40,10 +41,11 @@ require 'random_data'
  end
 
  puts "#{Post.count}"
- posts.find_or_create_by(title: "A unique title", body: "A unique body")
+ Post.find_or_create_by(title: "A unique title", body: "A unique body")
  puts "#{Post.count}"
 
  puts "Seed finished"
  puts "#{Topic.count} topics created"
  puts "#{Post.count} posts created"
  puts "#{Comment.count} comments created"
+ puts "#{Sponsored.count} sponsored posts created"
