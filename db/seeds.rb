@@ -1,14 +1,5 @@
 require 'random_data'
 
-# Create Sponsored Posts
-  15.times do
-    SponsoredPost.create!(
-      title: RandomData.random_sentence,
-      body: RandomData.random_sentence,
-      price: 99
-    )
-  end
-
 # Create Topics
  15.times do
    Topic.create!(
@@ -40,6 +31,16 @@ require 'random_data'
    )
  end
 
+ # Create Sponsored Posts
+   15.times do
+     SponsoredPost.create!(
+       title: RandomData.random_sentence,
+       body: RandomData.random_sentence,
+       price: 99,
+       topic: topics.sample
+     )
+   end
+
  puts "#{Post.count}"
  Post.find_or_create_by(title: "A unique title", body: "A unique body")
  puts "#{Post.count}"
@@ -48,4 +49,4 @@ require 'random_data'
  puts "#{Topic.count} topics created"
  puts "#{Post.count} posts created"
  puts "#{Comment.count} comments created"
- puts "#{Sponsored.count} sponsored posts created"
+ puts "#{SponsoredPost.count} sponsored posts created"
