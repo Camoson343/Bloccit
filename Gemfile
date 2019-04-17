@@ -16,6 +16,8 @@ end
 
 gem 'bootstrap-sass'
 
+gem 'bcrypt'
+
 gem "aws-sdk-s3", require: false
 
 group :development, :test do
