@@ -32,9 +32,11 @@ require 'rails_helper'
      it "should be an invalid user due to a blank email" do
        expect(user_with_invalid_email).to_not be_valid
      end
-   end
 
-   describe "user_split" do
-     
+     it "should format the users name" do
+       user.name = "bloc user"
+       user.save
+       expect(user.name).to eq "Bloc User"
+     end
    end
  end
