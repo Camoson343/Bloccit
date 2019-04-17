@@ -33,4 +33,8 @@ require 'rails_helper'
        expect(user_with_invalid_email).to_not be_valid
      end
    end
+
+   describe "user_split" do
+     
+   end
  end
