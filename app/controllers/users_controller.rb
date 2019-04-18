@@ -16,6 +16,14 @@ class UsersController < ApplicationController
       else
         flash.now[:alert] = "There was an error creating your account. Please try again."
         render :new
-      end 
+      end
   end
+
+  def user_params
+
+    params.require(:user).permit(:email, :password, :password_confirmation)
+  end
+
+  helper_method: :user_params
+  
 end
