@@ -56,7 +56,7 @@ require 'random_data'
  puts "#{Post.count}"
 
  user = User.first
- user.update.attributes!(
+ user.update_attributes!(
    email: 'ccdecisions@gmail.com',
    password: 'helloworld'
  )
