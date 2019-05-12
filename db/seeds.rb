@@ -11,7 +11,7 @@ require 'random_data'
   users = User.all
 
 # Create Topics
- 15.times do
+ 5.times do
    Topic.create!(
      name:         RandomData.random_sentence,
      description:  RandomData.random_paragraph
@@ -20,7 +20,7 @@ require 'random_data'
  topics = Topic.all
 
  # Create Posts
- 50.times do
+ 5.times do
 
    Post.create!(
      user: users.sample,
@@ -33,7 +33,11 @@ require 'random_data'
 
  # Create Comments
 
+<<<<<<< HEAD
  20.times do
+=======
+ 5.times do
+>>>>>>> authorization-work
    Comment.create!(
      user: users.sample,
      post: posts.sample,
@@ -42,7 +46,7 @@ require 'random_data'
  end
 
  # Create Sponsored Posts
-   15.times do
+   5.times do
      SponsoredPost.create!(
        title: RandomData.random_sentence,
        body: RandomData.random_sentence,
@@ -55,9 +59,16 @@ require 'random_data'
  Post.find_or_create_by(title: "A unique title", body: "A unique body")
  puts "#{Post.count}"
 
- user = User.first
- user.update_attributes!(
-   email: 'ccdecisions@gmail.com',
+ admin = User.create!(
+   name: 'Admin User',
+   email: 'admin@example.com',
+   password: 'helloworld',
+   role: 'admin'
+ )
+
+ member = User.create!(
+   name: 'Member User',
+   email: 'member@example.com',
    password: 'helloworld'
  )
 
